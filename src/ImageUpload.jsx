@@ -1,8 +1,8 @@
 import { useState } from "react";
 import galleryData from "../../Landing-Page/components/Gallery/galleryData.tsx";
 
-const cloudName = "your_own_name";
-const uploadPreset = "your_ow_preset";
+const cloudName = "your_cloud_name";
+const uploadPreset = "your_upload_key";
 
 function ImageUpload() {
 	const [secureUrls, setSecureUrls] = useState([]);
@@ -47,7 +47,7 @@ function ImageUpload() {
 		};
 
 		try {
-			const response = await fetch("http://localhost:5000/api/save-gallery", {
+			const response = await fetch("http://localhost:3000/api/save-gallery", {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",
